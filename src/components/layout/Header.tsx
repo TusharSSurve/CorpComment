@@ -1,8 +1,8 @@
+
+import { useFeedbackItemsContext } from "../../lib/hooks";
 import FeedbackForm from "../feedback/FeedbackForm";
-type HeaderProps = {
-  handleAddToList: (text: string) => void
-}
-export default function Header({ handleAddToList }: HeaderProps) {
+export default function Header() {
+  const { handleAddToList } = useFeedbackItemsContext();
   return (
     <header>
       <img src="https://bytegrad.com/course-assets/js/1/pattern.svg" alt="pattern" className="pattern" />
